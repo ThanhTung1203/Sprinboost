@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+Danh sach
+
+    <div class="inp"><input type="text" placeholder="Tim theo ten"></div>
+<div class="inp"><input type="text" placeholder="Tim theo khoang luong"></div>
+
+<a href="/home/create">ADD</a>
+<div th:each="item : ${list}">
+    <span th:text="${item.id}"></span>
+    <span th:text="${item.name}"></span>
+    <span th:text="${item.salary}"></span>
+    <a th:href="@{'/home/edit/'+${item.id}}">edit</a>
+    <a th:href="@{'/home/delete/'+${item.id}}">delete</a>
+</div>
+</body>
+</html>

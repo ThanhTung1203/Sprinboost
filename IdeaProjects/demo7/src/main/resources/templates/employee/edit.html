@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${mess}"></h1>
+<a href="/home">List Product</a>
+<form action="/home/save" method="post">
+    <input type="hidden" name="id" th:value="${item.id}">
+    <input type="text" name="name" th:value="${item.name}">
+    <input type="text" name="salary" th:value="${item.salary}">
+    <button>Save</button>
+</form>
+</body>
+</html>
